@@ -1,0 +1,57 @@
+:root {
+    --darkpink: #d9737b;
+    --lightpink: #f2b2ac;
+    --darkblue: #233559;
+    --teal: #4e9da6;
+    --cream: #f2e6ce;
+}
+main {
+    min-height: 85vh;
+}
+h1 {
+    color: var(--teal) !important;
+}
+strong {
+    color: var(--darkblue);
+}
+nav {
+    background-color: var(--teal);
+}
+nav a {
+    color: black;
+    text-decoration: none;
+}
+.nav-link.active {
+    color: white !important;
+}
+.nav-link {
+    color: black !important;
+}
+#description {
+    flex-basis: 50%;
+    text-align: start;
+}
+
+/* Improve focus outline for accessibility */
+:focus {
+  outline: 3px solid var(--blue) !important;
+  outline-offset: 2px;
+}
+
+/* Basic custom color scheme placeholder */
+body {
+  background-color: #fafafa;
+}
+
+/* NavLink active state */
+.nav-link.active {
+  font-weight: 600;
+}
+
+.card {
+    padding: 0 !important;
+}
+
+.card > img {
+    width: 100%;
+}

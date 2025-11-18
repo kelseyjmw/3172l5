@@ -1,12 +1,32 @@
-import './App.css';
+import './styles/App.css';
+import './styles/custom.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import NotFound404 from "./pages/NotFound404";
+
+
+export default function App() {
   return (
-    <div className="container text-center">
-      <h1>Welcome to my Full Stack App</h1>
-      <p>This is a React app styled with bootstrap 5.</p>
-    </div>
+
+    <Router>
+      <Header />
+
+      <main id="main" className="container py-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<NotFound404 />} />
+        </Routes>
+      </main>
+
+      <Footer />
+    </Router>
   );
 }
-
-export default App;
