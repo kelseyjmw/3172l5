@@ -8,10 +8,8 @@ export default function Projects() {
         Have a look below at some of the projects I have worked on!
       </p>
 
-
     <div>
         <ProjectList />
-
     </div>
     </section>
   );

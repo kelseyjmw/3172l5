@@ -1,12 +1,17 @@
 :root {
-    --darkpink: #d9737b;
-    --lightpink: #f2b2ac;
+    --green: #b4d441;
     --darkblue: #233559;
     --teal: #4e9da6;
     --cream: #f2e6ce;
 }
+
+/* main elements */
 main {
-    min-height: 85vh;
+    min-height: 100vh;
+}
+:focus {
+  outline: 3px solid var(--green) !important;
+  outline-offset: 2px;
 }
 h1 {
     color: var(--teal) !important;
@@ -14,7 +19,15 @@ h1 {
 strong {
     color: var(--darkblue);
 }
+#picture {
+    width: 20rem;
+}
+
+/* Navigation */
 nav {
+    background-color: var(--teal);
+}
+footer {
     background-color: var(--teal);
 }
 nav a {
@@ -23,19 +36,15 @@ nav a {
 }
 .nav-link.active {
     color: white !important;
+    font-weight: 600;
 }
 .nav-link {
     color: black !important;
 }
+
 #description {
     flex-basis: 50%;
     text-align: start;
-}
-
-/* Improve focus outline for accessibility */
-:focus {
-  outline: 3px solid var(--blue) !important;
-  outline-offset: 2px;
 }
 
 /* Basic custom color scheme placeholder */
@@ -43,15 +52,34 @@ body {
   background-color: #fafafa;
 }
 
-/* NavLink active state */
-.nav-link.active {
-  font-weight: 600;
-}
-
 .card {
     padding: 0 !important;
 }
-
 .card > img {
     width: 100%;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #b4d441 0%, #00CDAC  51%, #4e9da6 100%);
+  padding: 0.3rem 1rem;
+  font-size: 16pt;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 30px #eee;
+  border-radius: 10px;
+  display: block;
+  border: 2px outset lightgray;
+  width: fit-content;
+  text-decoration: none;
+}
+.btn-grad a {
+  color: white !important;
+}
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
 }
